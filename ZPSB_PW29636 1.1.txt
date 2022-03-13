@@ -1,0 +1,48 @@
+#include <stdio.h>
+#include <string.h>
+#include <iostream>
+#include <fstream> 
+
+using namespace std;
+
+void getznak(string str)
+{
+	int x;
+	cout << "Ktory znak pobrac? " << endl;
+	cin >> x;
+	cout << str.at(x);//Pobranie znaku o indeksie wprowadzonym przez uzytkownika (x) 
+}
+
+void replaceznak(string xyzreplace, string xyzold)
+{
+	
+	xyzold.replace(1, 3, xyzreplace);//Zmiana znaku 
+	cout << xyzold << endl;
+
+}
+
+void pobierzznak(string xyzold)
+{
+	ofstream MyFile("xyzold.txt");
+	MyFile.open("test.txt");//Pobranie ciągu znaków
+	MyFile << "Writing this to a file." << endl;
+
+}
+
+int main()
+{
+	char xyz[256];
+
+	cout << "Wprowadz dane: ";
+	cin.getline(xyz, 256);
+
+	cout << "Pobranie dlugosci " << strlen(xyz) << endl;//Pobranie długości wprowadzonego char
+
+	getznak(xyz);
+
+	string xyzold = "Text to zastapienia";
+	string xyzreplace;
+	cin >> xyzreplace;
+	replaceznak(xyzold, xyzold);
+	return 0;
+}
