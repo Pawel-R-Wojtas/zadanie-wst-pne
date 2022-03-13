@@ -1,0 +1,48 @@
+#include stdio.h
+#include string.h
+#include iostream
+#include fstream 
+
+using namespace std;
+
+void getznak(string str)
+{
+	int x;
+	cout  Który znak pobrać   endl;
+	cin  x;
+	cout  str.at(x);
+}
+
+void replaceznak(string xyzreplace, string xyzold)
+{
+	
+	xyzold.replace(1, 3, xyzreplace);
+	cout  xyzold  endl;
+
+}
+
+void pobierzznak(string xyzold)
+{
+	ofstream MyFile(xyzold.txt);
+	MyFile.open(test.txt);
+	MyFile  Writing this to a file.  endl;
+
+}
+
+int main()
+{
+	char xyz[256];
+
+	cout  Please, enter your name ;
+	cin.getline(xyz, 256);
+
+	cout  Pobranie długości   strlen(xyz)  endl;
+
+	getznak(xyz);
+
+	string xyzold = Example of replace;
+	string xyzreplace;
+	cin  xyzreplace;
+	replaceznak(xyzold, xyzold);
+	return 0;
+}
